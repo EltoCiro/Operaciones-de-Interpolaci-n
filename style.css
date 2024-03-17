@@ -11,6 +11,7 @@ body {
     min-height: 100vh;
     margin: 0;
     padding: 20px;
+    position: relative;
 }
 
 h1 {
@@ -44,6 +45,13 @@ input[type="number"] {
     background-color: #fff;
     color: #333;
     outline: none;
+    transition: all 0.3s ease;
+}
+
+select:focus,
+input[type="number"]:focus {
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.3);
+    transform: scale(1.05);
 }
 
 button {
@@ -66,4 +74,20 @@ button:hover {
     width: 200px;
     text-align: center;
     font-weight: 600;
+}
+
+#metodo {
+    position: absolute;
+    top: 20px;
+    right: 20px;
+    animation: slide-in 0.5s ease;
+}
+
+@keyframes slide-in {
+    0% {
+        transform: translateX(100%);
+    }
+    100% {
+        transform: translateX(0);
+    }
 }
