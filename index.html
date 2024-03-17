@@ -1,3 +1,4 @@
+<!--Docuemnto HTML-->
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -6,26 +7,36 @@
     <title>Interpolación</title>
     <link rel="stylesheet" href="style.css">
 </head>
+<!--Cuerpo del documento-->
 <body>
+    <!--Contenedor principal-->
     <div class="rounded-margin">
+        <!--Titulo principal-->
         <h1>Interpolación</h1>
+        <!--Contenedor del label y de las opciones-->
         <div>
+            <!--Etiqueta para el label del tipo de interpolacion-->
             <label for="metodo">Seleccione el método de interpolación:</label>
+            <!--Selector de opciones-->
             <select id="metodo">
                 <option value="">Seleccione...</option>
                 <option value="lagrange">Interpolación de Lagrange</option>
                 <option value="lineal">Interpolación Lineal</option>
             </select>
         </div>
+        <!--Contenedor de los inputs-->
         <div id="inputs-container"></div>
+        <!--Boton para calcular el resultado-->
         <center>
             <button id="calcular">Calcular</button><br><br>
+            <!--Contenedor del resultado-->
             <div>
                 <label for="resultado">Resultado :</label><br>
                 <input type="text" id="resultado" readonly>
             </div>
         </center>
     </div>
+    <!--Script para el manejo de eventos-->
     <script src="script.js"></script>
 </body>
 </html>
