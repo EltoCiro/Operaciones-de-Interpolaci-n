@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Interpolación de Lagrange</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="rounded-margin">
+        <h1>Interpolación de Lagrange</h1>
+        <div>
+            <label for="grado">Seleccione el grado de interpolación:</label>
+            <select id="grado">
+                <option value="">Seleccione...</option>
+                <option value="1">Primer grado</option>
+                <option value="2">Segundo grado</option>
+                <option value="3">Tercer grado</option>
+            </select>
+        </div>
+        <center>
+        <div id="inputs-container"></div>
+            <button id="calcular">Calcular</button><br><br>
+        <div>
+            <label for="resultado">Resultado :</label><br>
+            <input type="text" id="resultado" readonly>
+        </div>
+    </center>
+    </div>
+    <script src="script.js"></script>
+</body>
+</html>
