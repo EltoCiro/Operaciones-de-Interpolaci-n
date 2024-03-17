@@ -1,3 +1,5 @@
+//Contenido: Código JavaScript para la página de interpolación
+//Constantes
 const metodoSelect = document.getElementById('metodo');
 const metodoLabel = document.querySelector('label[for="metodo"]');
 const inputsContainer = document.getElementById('inputs-container');
@@ -5,9 +7,11 @@ const calcularBtn = document.getElementById('calcular');
 const resultadoInput = document.getElementById('resultado');
 const tituloH1 = document.querySelector('h1');
 
+//Eventos
 metodoSelect.addEventListener('change', mostrarInputs);
 calcularBtn.addEventListener('click', calcularInterpolacion);
 
+//Funcion para mostrar los inputs segun el metodo seleccionado
 function mostrarInputs() {
     const metodo = metodoSelect.value;
     inputsContainer.innerHTML = '';
@@ -28,6 +32,7 @@ function mostrarInputs() {
     }
 }
 
+//Funcion para mostrar los inputs de lagrange
 function mostrarInputsLagrange() {
     const grado = document.createElement('div');
     grado.innerHTML = `
@@ -45,6 +50,7 @@ function mostrarInputsLagrange() {
     gradoSelect.addEventListener('change', mostrarInputsGrado);
 }
 
+//Funcion para mostrar los inputs segun el grado seleccionado
 function mostrarInputsGrado() {
     const grado = parseInt(document.getElementById('grado').value);
     inputsContainer.innerHTML = '';
@@ -145,6 +151,7 @@ function mostrarInputsGrado() {
     }
 }
 
+//Funcion para mostrar los inputs de interpolacion lineal
 function mostrarInputsLineal() {
     inputsContainer.innerHTML = `
         <div>
@@ -170,6 +177,7 @@ function mostrarInputsLineal() {
     `;
 }
 
+//Funcion para calcular la interpolacion
 function calcularInterpolacion() {
     const metodo = metodoSelect.value;
 
@@ -180,6 +188,7 @@ function calcularInterpolacion() {
     }
 }
 
+//Funcion para calcular la interpolacion de lagrange
 function calcularLagrange() {
     const grado = parseInt(document.getElementById('grado').value);
     let resultado;
@@ -218,9 +227,11 @@ function calcularLagrange() {
             + (((x - x0) * (x - x1) * (x - x2)) / ((x3 - x0) * (x3 - x1) * (x3 - x2))) * fx3;
     }
 
+    //Mostrar el resultado
     resultadoInput.value = resultado || '';
 }
 
+//Funcion para calcular la interpolacion lineal
 function calcularLineal() {
     const x = parseFloat(document.getElementById('x').value);
     const x0 = parseFloat(document.getElementById('x0').value);

@@ -1,93 +1,133 @@
+/* Importa la fuente Poppins de Google Fonts */
 @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600&display=swap');
 
+/* Establece estilos globales para todos los elementos */
+* {
+    margin: 0; /* Elimina los márgenes */
+    padding: 0; /* Elimina el relleno */
+    box-sizing: border-box; /* Cambia el modelo de caja para incluir el relleno y el borde en el tamaño del elemento */
+    font-family: 'Poppins', sans-serif; /* Establece la fuente por defecto */
+}
+
+/* Establece estilos para el cuerpo del documento */
 body {
-    font-family: 'Poppins', sans-serif;
-    background-color: #f8f8f8;
-    color: #333;
+    /* Establece una imagen de fondo, centrada, sin repetición y que cubre todo el espacio disponible */
+    background-image: url('https://www.xtrafondos.com/wallpapers/atardecer-digital-2129.jpg');
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    /* Centra los elementos hijos en el eje vertical y horizontal */
     display: flex;
-    flex-direction: column;
     align-items: center;
     justify-content: center;
-    min-height: 100vh;
-    margin: 0;
-    padding: 20px;
+    /* Establece la altura para ocupar toda la pantalla */
+    height: 100vh;
+    /* Centra el texto */
+    text-align: center;
+    /* Establece el color del texto */
+    color: #333;
+    /* Establece la posición relativa para permitir el posicionamiento absoluto de los elementos hijos */
     position: relative;
 }
 
+/* Establece estilos para los encabezados h1 */
 h1 {
-    text-align: center;
-    margin-bottom: 30px;
+    text-align: center; /* Centra el texto */
+    margin-bottom: 30px; /* Añade un margen inferior */
 }
 
+/* Establece estilos para los div */
 div {
-    margin-bottom: 20px;
+    margin-bottom: 20px; /* Añade un margen inferior */
 }
 
+/* Establece estilos para los elementos con la clase .rounded-margin */
 .rounded-margin {
-    margin: 20px;
-    border-radius: 10px;
-    padding: 20px;
-    box-shadow: 0 0 10px rgba(0,0,0,0.15);
+    margin: 20px; /* Añade un margen */
+    border-radius: 20px; /* Redondea las esquinas */
+    padding: 20px; /* Añade relleno */
+    box-shadow: 0 0 15px rgba(0,0,0,0.1); /* Añade una sombra */
+    background: rgba(255, 255, 255, 0.2); /* Establece un fondo semitransparente */
 }
 
+/* Establece estilos para las etiquetas label */
 label {
-    font-weight: 500;
-    margin-right: 10px;
+    font-weight: 500; /* Aumenta el grosor de la fuente */
+    margin-right: 10px; /* Añade un margen a la derecha */
 }
 
+/* Establece estilos para los select e input de tipo number */
 select,
 input[type="number"] {
+    /* Añade relleno, borde, redondeo de esquinas, sombra, tamaño de fuente, fondo, color de texto, elimina el contorno y añade una transición */
     padding: 10px;
-    border: none;
+    border: 1px solid #ddd;
     border-radius: 5px;
-    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+    box-shadow: 0 0 10px rgba(0,0,0,0.1);
     font-size: 16px;
-    background-color: #fff;
+    background: #fff;
     color: #333;
     outline: none;
     transition: all 0.3s ease;
 }
 
+/* Establece estilos para los select e input de tipo number cuando están en foco */
 select:focus,
 input[type="number"]:focus {
-    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.3);
-    transform: scale(1.05);
+    /* Añade una sombra y una transformación */
+    box-shadow: 0 0 10px rgba(0,0,0,0.5), inset 0 0 30px rgba(0,0,0,0.5);
+    transform: scale(0.9);
 }
 
+/* Establece estilos para los botones */
 button {
-    padding: 10px 20px;
+    /* Añade ancho, alto, fondo, redondeo de esquinas, sombra, margen, tamaño de fuente, elimina el borde, añade un cursor de puntero, una transición y un color de texto */
+    width: 100px;
+    height: 40px;
+    background: rgba(255, 255, 255, 0.5);
+    border-radius: 20px;
+    box-shadow: 0 0 10px rgba(0,0,0,0.5);
+    margin: 5px;
+    font-size: 20px;
     border: none;
-    border-radius: 5px;
-    background-color: #4CAF50;
-    color: #fff;
-    font-size: 16px;
     cursor: pointer;
-    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
-    transition: background-color 0.3s ease;
+    transition: all 0.3s ease;
+    color:#000;   
 }
 
+/* Establece estilos para los botones cuando se pasan por encima */
 button:hover {
-    background-color: #45a049;
+    background: #0056b3; /* Cambia el color de fondo */
 }
 
+/* Establece estilos para los botones cuando se presionan */
+button:active {
+    /* Añade una transformación y una sombra */
+    transform: scale(0.9);
+    box-shadow: 0 0 10px rgba(0,0,0,0.5), inset 0 0 30px rgba(0,0,0,0.5);
+}
+
+/* Establece estilos para el elemento con id #resultado */
 #resultado {
-    width: 200px;
-    text-align: center;
-    font-weight: 600;
+    width: 200px; /* Establece el ancho */
+    text-align: center; /* Centra el texto */
+    font-weight: 600; /* Aumenta el grosor de la fuente */
 }
 
+/* Establece estilos para el elemento con id #metodo */
 #metodo {
-    position: absolute;
-    top: 20px;
-    right: 20px;
-    animation: slide-in 0.5s ease;
+    position: absolute; /* Establece la posición absoluta */
+    top: 20px; /* Posiciona desde la parte superior */
+    right: 20px; /* Posiciona desde la derecha */
+    animation: slide-in 0.5s ease; /* Añade una animación */
 }
 
+/* Define la animación slide-in */
 @keyframes slide-in {
     0% {
-        transform: translateX(100%);
+        transform: translateX(100%); /* Comienza moviendo el elemento completamente a la derecha */
     }
     100% {
-        transform: translateX(0);
+        transform: translateX(0); /* Termina moviendo el elemento a su posición original */
     }
 }
