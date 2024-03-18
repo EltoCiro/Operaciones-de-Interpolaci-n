@@ -1,4 +1,3 @@
-<!--Docuemnto HTML-->
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -7,36 +6,44 @@
     <title>Interpolación</title>
     <link rel="stylesheet" href="style.css">
 </head>
-<!--Cuerpo del documento-->
 <body>
-    <!--Contenedor principal-->
-    <div class="rounded-margin">
-        <!--Titulo principal-->
+    <div class="container">
         <h1>Interpolación</h1>
-        <!--Contenedor del label y de las opciones-->
-        <div>
-            <!--Etiqueta para el label del tipo de interpolacion-->
-            <label for="metodo">Seleccione el método de interpolación:</label>
-            <!--Selector de opciones-->
-            <select id="metodo">
-                <option value="">Seleccione...</option>
-                <option value="lagrange">Interpolación de Lagrange</option>
-                <option value="lineal">Interpolación Lineal</option>
-            </select>
+        <div class="form-group">
+            <h2>Interpolación Lineal</h2>
+            <label for="x-linear">x:</label>
+            <input type="number" id="x-linear" required>
+            <label for="x0-linear">x0:</label>
+            <input type="number" id="x0-linear" required>
+            <label for="x1-linear">x1:</label>
+            <input type="number" id="x1-linear" required>
+            <label for="fx0-linear">f(x0):</label>
+            <input type="number" id="fx0-linear" required>
+            <label for="fx1-linear">f(x1):</label>
+            <input type="number" id="fx1-linear" required>
+            <button onclick="calculateLinearInterpolation()">Calcular</button>
+            <p id="linear-result"></p>
         </div>
-        <!--Contenedor de los inputs-->
-        <div id="inputs-container"></div>
-        <!--Boton para calcular el resultado-->
-        <center>
-            <button id="calcular">Calcular</button><br><br>
-            <!--Contenedor del resultado-->
-            <div>
-                <label for="resultado">Resultado :</label><br>
-                <input type="text" id="resultado" readonly>
-            </div>
-        </center>
+        <div class="form-group">
+            <h2>Interpolación de Lagrange (2do orden)</h2>
+            <label for="x-lagrange">x:</label>
+            <input type="number" id="x-lagrange" required>
+            <label for="x0-lagrange">x0:</label>
+            <input type="number" id="x0-lagrange" required>
+            <label for="x1-lagrange">x1:</label>
+            <input type="number" id="x1-lagrange" required>
+            <label for="x2-lagrange">x2:</label>
+            <input type="number" id="x2-lagrange" required>
+            <label for="fx0-lagrange">f(x0):</label>
+            <input type="number" id="fx0-lagrange" required>
+            <label for="fx1-lagrange">f(x1):</label>
+            <input type="number" id="fx1-lagrange" required>
+            <label for="fx2-lagrange">f(x2):</label>
+            <input type="number" id="fx2-lagrange" required>
+            <button onclick="calculateLagrangeInterpolation()">Calcular</button>
+            <p id="lagrange-result"></p>
+        </div>
     </div>
-    <!--Script para el manejo de eventos-->
     <script src="script.js"></script>
 </body>
 </html>
